@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — For You</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="brand">For You ❤️</h1>
+      <button id="musicBtn" class="music-btn">Play Music</button>
+    </header>
+
+    <main class="main">
+      <section class="left">
+        <div class="slideshow" id="slideshow">
+          <!-- Slides (replace assets/photo1.jpg ... photo5.jpg) -->
+          <div class="slide" style="background-image:url('assets/photo1.jpg')"></div>
+          <div class="slide" style="background-image:url('assets/photo2.jpg')"></div>
+          <div class="slide" style="background-image:url('assets/photo3.jpg')"></div>
+          <div class="slide" style="background-image:url('assets/photo4.jpg')"></div>
+          <div class="slide" style="background-image:url('assets/photo5.jpg')"></div>
+        </div>
+
+        <div class="navs">
+          <button id="prev" class="nav">❮</button>
+          <button id="next" class="nav">❯</button>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="card">
+          <div class="message" id="message">
+            <h2 id="greeting">Happy Birthday, My Love ❤️</h2>
+            <p id="sub">You make my world brighter every day. Today is all yours.</p>
+          </div>
+          <button id="revealBtn" class="reveal">Reveal Surprise</button>
+          <div class="heart-area" id="heartArea"></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">Made with ♥ by Prashant</footer>
+  </div>
+
+  <audio id="audio" src="assets/song.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
