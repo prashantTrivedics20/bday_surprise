@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas id="particles"></canvas>
+
   <div class="wrap">
     <header class="header">
       <h1 class="brand">For You ❤️</h1>
-      <button id="musicBtn" class="music-btn">Play Music</button>
+      <button id="musicBtn" class="music-btn">
+        <span class="icon">🎵</span>
+        <span class="label">Play Music</span>
+      </button>
     </header>
 
     <main class="main">
-      <section class="left">
+      <!-- Left: Slideshow -->
+      <section class="slideshow-wrap">
         <div class="slideshow" id="slideshow">
-          <!-- Slides (replace assets/photo1.jpg ... photo5.jpg) -->
           <div class="slide" style="background-image:url('assets/photo1.jpg')"></div>
           <div class="slide" style="background-image:url('assets/photo2.jpg')"></div>
           <div class="slide" style="background-image:url('assets/photo3.jpg')"></div>
@@ -24,25 +29,50 @@
           <div class="slide" style="background-image:url('assets/photo5.jpg')"></div>
         </div>
 
+        <!-- Dot indicators -->
+        <div class="slide-counter" id="dotContainer"></div>
+
+        <!-- Nav arrows -->
         <div class="navs">
-          <button id="prev" class="nav">❮</button>
-          <button id="next" class="nav">❯</button>
+          <button id="prev" class="nav" aria-label="Previous">❮</button>
+          <button id="next" class="nav" aria-label="Next">❯</button>
         </div>
       </section>
 
+      <!-- Right: Card -->
       <aside class="right">
         <div class="card">
-          <div class="message" id="message">
+          <div class="greeting-wrap">
+            <span class="greeting-emoji">🌸</span>
             <h2 id="greeting">Happy Birthday, My Love ❤️</h2>
-            <p id="sub">You make my world brighter every day. Today is all yours.</p>
+            <p id="sub">You make my world brighter every single day. Today is all yours — celebrate every beautiful moment.</p>
           </div>
-          <button id="revealBtn" class="reveal">Reveal Surprise</button>
+
+          <div class="divider"></div>
+
+          <div class="love-notes">
+            <div class="note-item">
+              <span class="ni-icon">💫</span>
+              <span class="ni-label">Always</span>
+            </div>
+            <div class="note-item">
+              <span class="ni-icon">🌹</span>
+              <span class="ni-label">Forever</span>
+            </div>
+            <div class="note-item">
+              <span class="ni-icon">✨</span>
+              <span class="ni-label">Always</span>
+            </div>
+          </div>
+
+          <button id="revealBtn" class="reveal">🎁 Reveal Surprise</button>
+
           <div class="heart-area" id="heartArea"></div>
         </div>
       </aside>
     </main>
 
-    <footer class="footer">Made with ♥ by Prashant</footer>
+    <footer class="footer">Made with <span>♥</span> by Prashant</footer>
   </div>
 
   <audio id="audio" src="assets/song.mp3" preload="auto"></audio>
